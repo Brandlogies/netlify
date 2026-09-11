@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brandlogies — SEO Services in Delhi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101826;
+    --ink-soft:#2b3546;
+    --paper:#FAF9F6;
+    --sand:#EEE8DA;
+    --green:#2E6E52;
+    --green-deep:#1C4536;
+    --line:#D8D2C2;
+    --slate:#5B6472;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    font-size:16px;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    line-height:1.12;
+    color:var(--ink);
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- Header ---------- */
+
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(250,249,246,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 32px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+
+  .logo{
+    font-family:'Fraunces', serif;
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+
+  .nav-links{
+    display:flex;
+    gap:32px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  .nav-links a:hover{color:var(--green-deep);}
+
+  .nav-cta{
+    background:var(--ink);
+    color:var(--paper);
+    padding:10px 20px;
+    border-radius:2px;
+    font-size:14px;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--green-deep);}
+
+  .nav-toggle{display:none;}
+
+  /* ---------- Hero ---------- */
+
+  .hero{
+    padding:88px 0 96px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+  }
+
+  .hero h1{
+    font-size:52px;
+    letter-spacing:-0.015em;
+    max-width:580px;
+  }
+
+  .hero h1 em{
+    font-style:italic;
+    color:var(--green-deep);
+  }
+
+  .hero p.lede{
+    margin-top:22px;
+    max-width:480px;
+    font-size:17px;
+    color:var(--ink-soft);
+  }
+
+  .hero-ctas{
+    margin-top:32px;
+    display:flex;
+    gap:16px;
+    align-items:center;
+  }
+
+  .btn-primary{
+    background:var(--green-deep);
+    color:#fff;
+    padding:14px 26px;
+    border-radius:2px;
+    font-size:15px;
+    display:inline-block;
+  }
+  .btn-primary:hover{background:var(--ink);}
+
+  .btn-ghost{
+    color:var(--ink);
+    font-size:15px;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:2px;
+  }
+
+  /* SERP mockup */
+
+  .serp{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:24px 24px 8px;
+  }
+
+  .serp-search{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:10px 16px;
+    color:var(--slate);
+    font-size:14px;
+    margin-bottom:20px;
+  }
+
+  .serp-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--green);
+    flex-shrink:0;
+  }
+
+  .serp-result{
+    padding:14px 0;
+    border-top:1px solid #EFEBE0;
+  }
+  .serp-result:first-of-type{border-top:none;}
+
+  .serp-result .url{
+    font-size:12.5px;
+    color:var(--slate);
+    margin-bottom:4px;
+  }
+
+  .serp-result .title{
+    font-size:16px;
+    color:var(--green-deep);
+    margin-bottom:4px;
+  }
+
+  .serp-result.featured{
+    background:var(--sand);
+    margin:0 -24px;
+    padding:14px 24px;
+    border:none;
+  }
+
+  .serp-result .desc{
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  .serp-badge{
+    display:inline-block;
+    font-size:11px;
+    color:var(--green-deep);
+    background:#E1EEE7;
+    padding:2px 8px;
+    border-radius:20px;
+    margin-bottom:6px;
+  }
+
+  /* ---------- Section shell ---------- */
+
+  section{padding:96px 0;}
+  section.tight{padding:72px 0;}
+  .divider{border-bottom:1px solid var(--line);}
+
+  .kicker{
+    font-size:14px;
+    color:var(--green-deep);
+    margin-bottom:14px;
+  }
+
+  .section-head{
+    display:grid;
+    grid-template-columns:0.6fr 1fr;
+    gap:48px;
+    margin-bottom:52px;
+  }
+
+  .section-head h2{
+    font-size:34px;
+    max-width:420px;
+  }
+
+  .section-head .support{
+    color:var(--ink-soft);
+    font-size:16px;
+    max-width:460px;
+    align-self:end;
+  }
+
+  /* ---------- Focus list ---------- */
+
+  .focus-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+
+  .focus-item{
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:22px 20px;
+    font-size:15px;
+  }
+
+  /* ---------- Services ---------- */
+
+  .services{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .service-row{
+    display:grid;
+    grid-template-columns:120px 1fr 1.3fr;
+    gap:40px;
+    padding:34px 0;
+    border-top:1px solid var(--line);
+    align-items:baseline;
+  }
+
+  .service-row:last-child{border-bottom:1px solid var(--line);}
+
+  .service-index{
+    font-family:'Fraunces', serif;
+    font-size:15px;
+    color:var(--slate);
+  }
+
+  .service-row h3{
+    font-size:22px;
+    font-weight:500;
+  }
+
+  .service-row p{
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+
+  /* ---------- Why choose ---------- */
+
+  .why-bg{
+    background:var(--ink);
+    color:var(--paper);
+  }
+
+  .why-bg .kicker{color:#8FBFA8;}
+  .why-bg h2{color:var(--paper);}
+  .why-bg .section-head .support{color:#B7BEC9;}
+
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:rgba(255,255,255,0.14);
+  }
+
+  .why-card{
+    background:var(--ink);
+    padding:32px;
+  }
+
+  .why-card h3{
+    color:var(--paper);
+    font-size:19px;
+    margin-bottom:10px;
+    font-weight:500;
+  }
+
+  .why-card p{
+    color:#B7BEC9;
+    font-size:14.5px;
+  }
+
+  /* ---------- Founder ---------- */
+
+  .founder{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:48px;
+    align-items:start;
+  }
+
+  .founder-mark{
+    width:100%;
+    aspect-ratio:1;
+    background:var(--sand);
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:52px;
+    color:var(--green-deep);
+    overflow:hidden;
+  }
+
+  .founder-mark img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(0.15);
+  }
+
+  .founder-copy h3{
+    font-size:24px;
+    margin-bottom:4px;
+  }
+
+  .founder-copy .role{
+    color:var(--green-deep);
+    font-size:14.5px;
+    margin-bottom:18px;
+  }
+
+  .founder-copy p{
+    color:var(--ink-soft);
+    max-width:640px;
+    margin-bottom:14px;
+    font-size:15.5px;
+  }
+
+  /* ---------- Process ---------- */
+
+  .process-list{
+    border-top:1px solid var(--line);
+  }
+
+  .process-item{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:28px;
+    padding:28px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .process-num{
+    font-family:'Fraunces', serif;
+    font-size:20px;
+    color:var(--green-deep);
+  }
+
+  .process-item h3{
+    font-size:19px;
+    margin-bottom:6px;
+    font-weight:500;
+  }
+
+  .process-item p{
+    color:var(--ink-soft);
+    font-size:15px;
+    max-width:560px;
+  }
+
+  /* ---------- Growth statement ---------- */
+
+  .statement{
+    background:var(--sand);
+  }
+
+  .statement blockquote{
+    font-family:'Fraunces', serif;
+    font-size:30px;
+    line-height:1.35;
+    max-width:760px;
+    color:var(--ink);
+  }
+
+  .statement p.follow{
+    margin-top:22px;
+    max-width:600px;
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+
+  /* ---------- Final CTA ---------- */
+
+  .final-cta{
+    text-align:left;
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:40px;
+    align-items:center;
+  }
+
+  .final-cta h2{
+    font-size:38px;
+    max-width:480px;
+  }
+
+  .final-cta .support{
+    color:var(--ink-soft);
+    font-size:16px;
+    margin-top:14px;
+    max-width:420px;
+  }
+
+  .final-actions{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    align-items:flex-start;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:32px;
+  }
+
+  .footer-inner{
+    max-width:1120px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:13.5px;
+    color:var(--slate);
+  }
+
+  /* ---------- Responsive ---------- */
+
+  @media(max-width:860px){
+    .nav-links{display:none;}
+    .hero h1{font-size:38px;}
+    .hero-grid{grid-template-columns:1fr;}
+    .section-head{grid-template-columns:1fr;gap:16px;}
+    .focus-grid{grid-template-columns:repeat(2,1fr);}
+    .service-row{grid-template-columns:1fr;gap:8px;}
+    .why-grid{grid-template-columns:1fr;}
+    .founder{grid-template-columns:1fr;}
+    .founder-mark{width:96px;height:96px;font-size:34px;}
+    .final-cta{grid-template-columns:1fr;}
+    .statement blockquote{font-size:24px;}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+  }
+
+  :focus-visible{
+    outline:2px solid var(--green-deep);
+    outline-offset:2px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Brandlogies</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Talk to us</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Your customers are searching. <em>Make sure they find you first.</em></h1>
+      <p class="lede">Brandlogies provides professional SEO services in Delhi to help businesses improve search visibility, attract relevant audiences, and build a stronger digital presence — grounded in research, not guesswork.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Discuss your SEO goals</a>
+        <a href="#services" class="btn-ghost">See what we do</a>
+      </div>
+    </div>
+    <div class="serp">
+      <div class="serp-search"><span class="serp-dot"></span> best seo company in delhi</div>
+      <div class="serp-result featured">
+        <span class="serp-badge">Sponsored insight</span>
+        <div class="title">Brandlogies — SEO Services in Delhi</div>
+        <div class="url">brandlogies.com</div>
+        <div class="desc">Result-focused SEO built on research, strategy and long-term organic growth.</div>
+      </div>
+      <div class="serp-result">
+        <div class="url">competitor-a.com</div>
+        <div class="title">Generic SEO Agency</div>
+      </div>
+      <div class="serp-result">
+        <div class="url">competitor-b.com</div>
+        <div class="title">Another Digital Firm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight divider">
+  <div class="wrap">
+    <div class="kicker">A result-focused SEO company in Delhi</div>
+    <div class="section-head" style="margin-bottom:36px;">
+      <h2>SEO should connect you with people already looking for what you offer.</h2>
+      <p class="support">We begin by understanding your business, market, competitors, and target audience — so the strategy fits your industry instead of a standard template. Whether you're launching a new site, growing a local business, or strengthening an existing presence, we help you build a structured roadmap for organic growth.</p>
+    </div>
+    <div class="focus-grid">
+      <div class="focus-item">Search visibility</div>
+      <div class="focus-item">Relevant organic traffic</div>
+      <div class="focus-item">Target audience reach</div>
+      <div class="focus-item">Website optimization</div>
+      <div class="focus-item">Competitor research</div>
+      <div class="focus-item">Strategic content</div>
+      <div class="focus-item">Long-term digital growth</div>
+      <div class="focus-item">Local presence</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="divider">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Our SEO services</h2>
+      <p class="support">Five focused disciplines, planned together rather than sold separately.</p>
+    </div>
+    <div class="services">
+      <div class="service-row">
+        <div class="service-index">On-page</div>
+        <h3>On-Page SEO</h3>
+        <p>A well-optimized website gives search engines a clearer understanding of your business. We focus on relevant keywords, website content, page structure, and other important optimization elements.</p>
+      </div>
+      <div class="service-row">
+        <div class="service-index">Off-page</div>
+        <h3>Off-Page SEO</h3>
+        <p>Visibility goes beyond your website. Our off-page activities are planned to support your site's overall search presence and strengthen its digital reach.</p>
+      </div>
+      <div class="service-row">
+        <div class="service-index">Local</div>
+        <h3>Local SEO</h3>
+        <p>If your business serves specific locations, local search visibility is extremely valuable. We help you build a stronger presence for location-based searches and reach relevant nearby audiences.</p>
+      </div>
+      <div class="service-row">
+        <div class="service-index">Research</div>
+        <h3>SEO Competitor Analysis</h3>
+        <p>Understanding your competition is central to an effective strategy. We research businesses in your niche to identify market players, opportunities, and areas where you can improve.</p>
+      </div>
+      <div class="service-row">
+        <div class="service-index">Content</div>
+        <h3>SEO Content Strategy</h3>
+        <p>Useful content answers customer questions, communicates expertise, and creates more opportunities to appear in search results — built around your objectives and audience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Why choose Brandlogies</div>
+      <h2>Strategy built for your business — not a template.</h2>
+      <p class="support" style="grid-column:1/-1;"></p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Business-focused strategy</h3>
+        <p>We don't believe every business should follow the same SEO plan. Ours is developed after understanding your requirements, industry, audience, and competitive environment.</p>
+      </div>
+      <div class="why-card">
+        <h3>Research-driven approach</h3>
+        <p>From competitor research to market insights, we use research as the foundation for planning every SEO activity.</p>
+      </div>
+      <div class="why-card">
+        <h3>A clear process</h3>
+        <p>We move through understanding, research, strategy, insights, and budget planning — keeping the work organized and aligned with your objectives.</p>
+      </div>
+      <div class="why-card">
+        <h3>Cost-effective solutions</h3>
+        <p>We focus on practical strategies that consider your business requirements and budget, with a clear approach to campaign planning.</p>
+      </div>
+    </div>
+    <p style="margin-top:36px;max-width:640px;color:#B7BEC9;font-size:15px;">SEO is only one part of building a successful online brand. Brandlogies also offers digital marketing, social media marketing, lead generation, influencer marketing, online advertising, and brand management.</p>
+  </div>
+</section>
+
+<section id="founder" class="divider">
+  <div class="wrap">
+    <div class="kicker" style="margin-bottom:36px;">Meet the founder</div>
+    <div class="founder">
+      <div class="founder-mark"><img src="assets/abhishek-k.webp" alt="Abhishek K., Founder of Brandlogies"></div>
+      <div class="founder-copy">
+        <h3>Abhishek K.</h3>
+        <div class="role">Founder, Brandlogies</div>
+        <p>Abhishek K. brings over 10 years of experience in digital advertising. His extensive background contributes to Brandlogies' understanding of digital trends, online audiences, and the changing needs of businesses.</p>
+        <p>With a strong foundation in digital advertising, Abhishek leads Brandlogies with a focus on creating effective digital strategies for businesses looking to strengthen their online presence. His experience supports the agency's approach across SEO, digital marketing, online advertising, social media marketing, lead generation, and brand management.</p>
+        <p>Under his leadership, Brandlogies works toward helping businesses improve their digital visibility and build meaningful connections with their target audiences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="divider">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How our SEO process works</h2>
+      <p class="support">A structured sequence, from first conversation to ongoing refinement.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-item">
+        <div class="process-num">01</div>
+        <div><h3>Understand your business</h3><p>We start by understanding your business requirements, goals, target audience, and current digital presence.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">02</div>
+        <div><h3>Research your market</h3><p>Our team studies your industry and competitors to understand the search environment and identify potential opportunities.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">03</div>
+        <div><h3>Create the strategy</h3><p>We develop a focused SEO roadmap based on the research and your business objectives.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">04</div>
+        <div><h3>Implement & optimize</h3><p>Planned activities are implemented with attention to website visibility, content, and search optimization.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">05</div>
+        <div><h3>Analyze & improve</h3><p>SEO requires continuous improvement. We review insights and refine the strategy according to performance and changing opportunities.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="statement divider">
+  <div class="wrap">
+    <blockquote>SEO isn't about ranking for a few keywords. It's about building sustainable visibility, so your business is easy to discover exactly when customers are searching for what you offer.</blockquote>
+    <p class="follow">With Brandlogies' SEO services in Delhi, businesses can build a stronger organic presence while creating a consistent digital experience for their audience.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap final-cta">
+    <div>
+      <h2>Looking for the best SEO services in Delhi?</h2>
+      <p class="support">Brandlogies brings together SEO, digital marketing, content, social media, and brand strategy to create a more complete approach to online growth. If you want a partner that takes the time to understand your business, we're ready to help.</p>
+    </div>
+    <div class="final-actions">
+      <a href="#" class="btn-primary">Connect with our team</a>
+      <a href="#" class="btn-ghost">Discuss your SEO goals</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>Brandlogies, Delhi</span>
+    <span>SEO · Digital Marketing · Brand Strategy</span>
+  </div>
+</footer>
+
+</body>
+</html>
